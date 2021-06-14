@@ -1,0 +1,152 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400;900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+body {
+  background: url('tt-start-top2.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  font-family: 'Roboto Slab', serif;
+}
+header,
+section {
+  padding: 0.956em 5.4em;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+.logo-sec {
+  display: inline-flex;
+  justify-content: space-between;
+}
+.logo {
+  display: inline-block;
+  width: 100%;
+  max-width: 9em;
+}
+header::before,
+header::after {
+  content: '';
+  display: table;
+  padding: 0.9em;
+}
+.header::after {
+  content: '';
+  clear: both;
+}
+.menu {
+  float: right;
+  list-style: none;
+}
+.menu ul {
+  list-style: none;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.45);
+  top: 2.5em;
+  display: none;
+  width: 150px;
+  max-width: 150px;
+  padding: 0.5em;
+  line-height: 1.8em;
+}
+.menu::before,
+.menu::after {
+  content: '';
+  display: table;
+}
+.menu::after {
+  clear: both;
+}
+.menu > li {
+  display: inline-block;
+  padding: 0.79em 0.6em;
+  position: relative;
+}
+.menu li a {
+  text-decoration: none;
+  text-transform: capitalize;
+  text-align: center;
+  color: #fff;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.menu li:hover > a {
+  text-decoration: underline;
+}
+.menu > li:last-child {
+  border: 2px solid #fff;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  color: #fff;
+  cursor: pointer;
+}
+.menu li:nth-child(-n + 5):hover > ul {
+  display: block;
+}
+.main-content {
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: inherit;
+}
+
+h1 {
+  color: #fff;
+  font-size: 3.22em;
+  font-weight: 700;
+  /* font-style: normal; */
+  width: 100%;
+  max-width: 50%;
+}
+h1::before {
+  content: '';
+  width: 44px;
+  height: 2px;
+  background-color: #fff;
+  display: block;
+  transform: translateY(-17px);
+}
+p {
+  color: #fff;
+  width: 100%;
+  max-width: 50%;
+  font-size: 1.292em;
+  font-weight: 400;
+  margin-top: 1em;
+}
+@media screen and (max-width: 992px) {
+  body {
+    background-position: unset;
+    height: auto;
+  }
+  .menu {
+    float: none;
+    display: none;
+  }
+  .main-content {
+    justify-content: flex-start;
+  }
+  h1,
+  p {
+    max-width: 100%;
+    font-size: x-large;
+  }
+  h1::before {
+    display: none;
+  }
+}
